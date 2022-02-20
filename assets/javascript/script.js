@@ -10,16 +10,10 @@ special = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/",
 number = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 // lowercasebetical characters
 lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-// Space is for the Uppercase conversion
-space = [];
+// uppercase characters
+uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 // Choices declared outside the if statement so they can be concatenated upon condition
 var choices;
-// converts letters to uppercase 
-var toUpper = function (x) {
-    return x.toUpperCase();
-};
-// creates a variable for uppercase conversion
-uppercase = lowercase.map(toUpper);
 
 var get = document.querySelector("#generate");
 
@@ -100,7 +94,7 @@ function generatePassword() {
         choices = lowercase;
     }
     else if (confirmUppercase) {
-        choices = space.concat(uppercase);
+        choices = uppercase;
     };
     // password variable is an array placeholder for user generated amount of length
     var password = [];
